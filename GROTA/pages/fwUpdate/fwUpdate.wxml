@@ -1,0 +1,102 @@
+
+<view class="fwupdate-page">
+    <view class="select-device">
+       <view class='name'>{{deviceName}}</view>
+      <view class='uuid'>{{deviceID}}</view>
+     </view>
+
+  <view class="update-group" style="margin-top: 20px;"> 
+    <view class="info-text-group">
+      <view class="info-text" >升级固件</view>
+      <image src='/images/ic_help.png' style='width: 25px; margin-top: 11px; z-index: 1;' mode="widthFix" bind:tap="onTapDfuHelpImg"></image>
+    </view>
+    
+    <view class="file-group">
+      <image src='/images/ic_file.png' style='width: 30px;' mode="widthFix"></image>
+      <view class="file-text">{{selectFileName}}</view>
+    </view>
+
+    <view class="imginfo-all-group" hidden="{{showImage}}">
+        <view class="imginfo-one-group">
+          <view class="imginfo-text">{{comment}}</view>
+          <view class="imginfo-text">{{version}}</view>
+        </view>
+        <view class="line"></view>
+        <view class="imginfo-one-group">
+          <view class="imginfo-text">{{loadAddr}}</view>
+          <view class="imginfo-text">{{size}}</view>
+        </view>
+        <view class="line"></view>
+        <view class="imginfo-one-group">
+          <view class="imginfo-text">{{runAddr}}</view>
+          <view class="imginfo-text">{{checkSum}}</view>
+        </view>
+        <view class="line"></view>
+        <view class="imginfo-one-group">
+          <view class="imginfo-text">{{xqspiSpeed}}</view>
+          <view class="imginfo-text">{{checkImage}}</view>
+        </view>
+        <view class="line"></view>
+        <view class="imginfo-one-group">
+          <view class="imginfo-text">{{systemClock}}</view>
+          <view class="imginfo-text">{{bootDelay}}</view>
+        </view>
+        <view class="line"></view>
+        <view class="imginfo-one-group">
+          <view class="imginfo-text">{{spiAccessMode}}</view>
+          <view class="imginfo-text">{{codeCopyMode}}</view>
+        </view>
+        <view class="line"></view>
+      </view>
+
+    <view class="img-group">
+      <image src='/images/fwUpdate_active.png' style='width: 100px;' mode="widthFix" hidden="{{!showImage}}"></image>
+    </view>
+
+    <view class="button-group">
+      <myButton bind:tap="onTapgetBinFile">选择文件</myButton>
+    </view>
+  </view>
+
+  <view class="updatefw-set-group" style="display:{{displayStyle}};"> 
+    <view class="info-text-group">
+      <view class="info-text" >升级设置</view>
+      <image src='/images/ic_help.png' style='width: 25px; margin-top: 11px;' mode="widthFix" bind:tap="onTapSetHelpImg"></image>
+    </view>
+    <view class="update-button-group">
+      <myButton bind:tap="onTapStartUpdateButton">开始升级</myButton>
+    </view>
+
+    <radio-group class = "checkbox-group" style="margin-top: 10px;" bindchange="updateModeRadioChange">
+      <label style="margin-left: 10px;font-size: 13px;">
+        <radio value="FAST" checked="{{updateModeValue === 'FAST'}}">快速模式</radio>
+      </label>
+      <label style="margin-right: 35px;font-size: 13px;">
+        <radio value="NORMAL" checked="{{updateModeValue === 'NORMAL'}}">普通模式</radio>
+      </label>
+    </radio-group> 
+
+    <view class="line" style="margin-top: 10px;"></view>
+
+    <radio-group class = "checkbox-group" style="margin-top: 10px;" bindchange="bankModeRadioChange">
+      <label style="margin-left: 10px;font-size: 13px;">
+        <radio value="DUAL" checked="{{bankModeValue === 'DUAL'}}">双区升级模式</radio>
+      </label>
+      <label style="margin-right:10px; font-size: 13px;">
+        <radio value="SINGLE" checked="{{bankModeValue === 'SINGLE'}}">单区升级模式</radio>
+      </label>
+    </radio-group> 
+
+    <view class="line" style="margin-top: 10px;"></view>
+
+    <view class="edit-copy-addr-group" hidden="{{!showCopyAddr}}">
+      <view style="font-size: 13px;">拷贝地址(0x):</view>
+      <input bindinput="inputChange" value="{{showInputValue}}" placeholder="请输入地址" type="number" maxlength="8" style="margin-left:5px; font-size: 16px; color: blue;"></input>
+    </view>
+    <view class="line" style="margin-top: 6px;" hidden="{{!showCopyAddr}}"></view>
+  </view>
+
+  <button bind:tap="onTapConnectButton" style="background-color: lightblue; margin-top: 100rpx;">{{connectedState}}</button>
+</view>
+<!-- 引用子组件 -->
+<circleProgress show="{{showUpdateProgress}}"  progress="{{updateProgress}}"></circleProgress>

@@ -1,0 +1,122 @@
+/**app.wxss**/
+page {
+  background-color:whitesmoke;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+.update-group{
+  display: flex;
+  flex-direction: column;
+  height: 500rpx;
+  width: 100%;
+  margin-top: 10px;
+  background-color:white;
+  border-radius: 8px;
+  position: relative;
+}
+
+myButton:not([size='mini']){ 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: lightblue; 
+  padding: 0rpx; 
+  width:200rpx; 
+  height:70rpx; 
+  border-radius: 20rpx; 
+  color: black; 
+  margin-bottom: 10rpx;
+  margin-right: 10rpx;
+}
+
+.button-group{
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-start;
+  align-items: flex-end;
+  height: 500rpx;
+  width: 100%;
+  position: absolute;
+}
+
+.select-device{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 10px;
+}
+.name{
+  font: size 14px;
+  color: black;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.uuid{
+  font-size:10px;
+  color:#7a7a7a;
+  margin-left: 10px;
+  width: 300px;
+}
+.info-text{
+  padding-top: 10px;
+  padding-left: 10px;
+  font: size 12px;
+  color: black;
+}
+
+.info-text-group{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.img-group{
+  display: flex;
+  height: 600rpx;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.file-group{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.file-text{
+  font: size 10px;
+  color: rgb(97, 93, 93);
+  margin-left: 5px;
+}
+.line {
+  border-bottom: 1px solid rgb(163, 162, 162); /* 设置横线的样式 */
+  width: 95%; /* 横线的宽度，可以根据需要调整 */
+  margin-left: 10px;
+}
+.edit-copy-addr-group{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.checkbox-group{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}

@@ -1,0 +1,16 @@
+/* pages/dataUpdate.wxss */
+
+.dataupdate-page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.updateData-set-group{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}

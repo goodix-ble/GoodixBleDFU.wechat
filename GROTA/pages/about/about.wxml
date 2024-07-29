@@ -1,0 +1,10 @@
+<!--pages/useGuide/useGuide.wxml-->
+<view class="about-info-group">
+  <text style="margin-left: 10px;">小程序版本号</text>
+  <text style="margin-right: 10px;">V1.0.3</text>
+</view>
+
+<view class="about-info-group" bind:tap="onTapSupportSDKVerison">
+  <text style="margin-left: 10px;">支持的最低SDK版本</text>
+  <image src="/images/ic_right.png" style="width: 20px; margin-right: 10px;"  mode="widthFix"></image>
+</view>

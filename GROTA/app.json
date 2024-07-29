@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/fwUpdate/fwUpdate",
+    "pages/dataUpdate/dataUpdate",
+    "pages/about/about",
+    "pages/blescan/blescan",
+    "pages/logs/logs",
+    "pages/webView/webView"
+  ],
+  "requiredPermissions": [
+    "bluetooth",
+    "location",
+    "record",
+    "writePhotosAlbum"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "汇顶蓝牙OTA升级",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "color": "#aaaaaa",
+    "selectedColor": "#2E87E4",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/fwUpdate/fwUpdate",
+        "text": "固件升级",
+        "iconPath": "/images/fwUpdate.png",
+        "selectedIconPath": "/images/fwUpdate_active.png"
+      },
+      {
+        "pagePath": "pages/dataUpdate/dataUpdate",
+        "text": "资源升级",
+        "iconPath": "/images/dataUpdate.png",
+        "selectedIconPath": "/images/dataUpdate_active.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "/images/ic_about.png",
+        "selectedIconPath": "/images/ic_about_active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

@@ -1,0 +1,90 @@
+.scan-page{
+  display: flex;
+  flex-direction:column;
+}
+.scan_controll{
+  display: flex;
+  flex-direction:row;
+  margin-top: 20rpx;
+}
+
+.device_list {
+  height: 500px;
+  border-radius: 3px;
+  flex: 1;
+}
+.device_item {
+  border-bottom: 1px solid var(--weui-FG-3);
+  padding: 5px;
+  color: var(--weui-FG-HALF);
+}
+
+.list-group{
+  display: flex;
+  flex-direction:row;
+  height: 60px;
+  width: auto;
+  background-color:white;
+  border-radius: 8px
+}
+
+.list-center{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.item-image{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.name{
+  font: size 16px;
+  color: black;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.uuid{
+  font-size:12px;
+  color:#7a7a7a;
+  margin-left: 10px;
+  width: 200px;
+}
+.rssi-view{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.rssi{
+  font-size:14px;
+  color:#7a7a7a;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+button-view{
+  justify-content: center;
+  align-items: center;
+}
+.filter-set-group{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: auto;
+  background-color:white;
+  margin: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 8px
+}
+.device-info{
+  margin: 10px;
+  font-size: 15px;
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "circleProgress": "/component/circleProgress/circleProgress"
+  },
+  "enableShareAppMessage": true
+}

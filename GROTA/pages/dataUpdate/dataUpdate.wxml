@@ -1,0 +1,55 @@
+<!--pages/dataUpdate.wxml-->
+<view class="dataupdate-page">
+  <view class="select-device">
+    <view class='name'>{{deviceName}}</view>
+    <view class='uuid'>{{deviceID}}</view>
+  </view>
+
+  <view class="update-group" style="margin-top: 20px;"> 
+    <view class="info-text-group">
+      <view class="info-text" >升级资源数据</view>
+      <image src='/images/ic_help.png' style='width: 25px; margin-top: 11px; z-index: 1;' mode="widthFix" bind:tap="onTapHelpImg"></image>
+    </view>
+
+    <view class="file-group">
+      <image src='/images/ic_file.png' style='width: 30px;' mode="widthFix"></image>
+      <view class="file-text">{{selectFileName}}</view>
+    </view>
+
+    <view class="updateData-set-group" hidden="{{showImage}}">
+      <view class="imginfo-text" style="margin-left: 10px;font-size: 13px;">{{selectFileSize}}</view>
+      <view class="line" style="margin-top: 10px;"></view>
+      <view class="edit-copy-addr-group">
+        <view style="font-size: 13px;">起始地址(0x):</view>
+        <input  bindinput="inputChange" placeholder="请输入地址" type="number" maxlength="8" style="margin-left:5px; font-size: 16px; color: blue; z-index: {{clickZIndex}};"></input>
+      </view>
+      <view class="line" style="margin-top: 10px;"></view>
+
+      <radio-group class = "checkbox-group" style="margin-top: 10px; z-index: {{clickZIndex}};" bindchange="updateModeRadioChange">
+      <label style="margin-left: 10px;font-size: 13px;">
+        <radio value="FAST" checked="{{updateModeValue === 'FAST'}}">快速模式</radio>
+      </label>
+      <label style="margin-right: 35px;font-size: 13px;">
+        <radio value="NORMAL" checked="{{updateModeValue === 'NORMAL'}}">普通模式</radio>
+      </label>
+    </radio-group> 
+    
+    </view>
+
+    <view class="img-group">
+      <image src='/images/dataUpdate_active.png' style='width: 100px;' mode="widthFix" hidden="{{!showImage}}"></image>
+    </view>
+
+    <view class="button-group" >
+      <view hidden="{{showImage}}">
+        <myButton bind:tap="onTapStartUpdate" style="margin-right: 20px;">开始升级</myButton>
+      </view>
+      <myButton bind:tap="onTapgetBinFile">选择文件</myButton>
+    </view>
+  </view>
+
+  <button bind:tap="onTapConnectButton" style="background-color: lightblue; margin-top: 100rpx;">{{connectedState}}</button>
+</view>
+
+<!-- 引用子组件 -->
+<circleProgress  show="{{showUpdateProgress}}"  progress="{{updateProgress}}"></circleProgress>
