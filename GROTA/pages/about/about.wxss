@@ -1,0 +1,13 @@
+/* pages/useGuide/useGuide.wxss */
+.about-info-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color:white;
+  border-radius: 8px;
+}

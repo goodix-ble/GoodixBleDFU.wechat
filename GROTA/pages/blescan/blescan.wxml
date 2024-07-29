@@ -1,0 +1,29 @@
+<view class="scan-page">
+  <view class="filter-set-group" >
+    <view class="info-text-group">
+      <view >升级设备过滤</view>
+      <image src='/images/ic_help.png' style='width: 25px;' mode="widthFix" bind:tap="onTapHelpImg"></image>
+    </view>
+    <switch bindchange="switchChange" checked="true"/>
+  </view>
+  <view class="device-info">已发现{{devices.length}}个设备：(请确保系统蓝牙和位置权限已开启)</view>
+  <scroll-view class="device_list" scroll-y scroll-with-animation refresher-enabled="{{true}}" refresher-threshold="{{100}}" refresher-default-style="black" 
+        refresher-background="white" refresher-triggered="{{triggered}}" bindrefresherrefresh="onScrollRefresh">
+    <view wx:for="{{devices}}" wx:key="index"
+      data-device-id="{{item.deviceId}}"
+      data-name="{{item.name || item.localName}}"
+      bindtap="onSelectDevice" 
+      class="device_item">
+      <view class="list-group">
+        <view class="list-center">
+          <view class='name'>{{item.localName}}</view>
+          <view class='uuid'>{{item.deviceId}}</view>
+        </view>
+        <view class="rssi-view">
+          <view class='rssi'>{{item.RSSI}}dBm</view>
+      </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+

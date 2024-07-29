@@ -1,0 +1,14 @@
+<!-- circular-progress-dialog.wxml -->
+<view class="mask" wx:if="{{show}}">
+  <view class="container">
+    <view class="progress-canvas-group">
+      <text style="font-size: 18px;">正在升级</text>
+      <canvas canvas-id="progressCanvas" class="progress-canvas"></canvas>
+      <text style="font-size: 18px; margin-top: 10px;">{{progress}}%</text>
+    </view>
+    <view class="img-group">
+      <image src="/images/ic_start_update.png" style='width: 100px; margin-top: 10px;' mode="widthFix"></image>
+    </view>
+
+  </view>
+</view>

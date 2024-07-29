@@ -1,0 +1,49 @@
+.fwupdate-page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.imginfo-one-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.imginfo-all-group{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.imginfo-text{
+ font-size: 13px;
+  color: rgb(78, 77, 77);
+}
+
+.updatefw-set-group{
+  display: flex;
+  flex-direction: column;
+  height: 430rpx;
+  width: 100%;
+  margin-top: 10px;
+  background-color:white;
+  border-radius: 8px;
+  position: relative;
+}
+
+.update-button-group{
+  display: flex;
+  /* justify-content:space-between; */
+  justify-content:flex-end;
+  align-content: flex-start;
+  align-items: flex-end;
+  height: 360rpx;
+  width: 100%;
+  position: absolute;
+}
+
